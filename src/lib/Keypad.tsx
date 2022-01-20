@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import styled from "styled-components";
 
 import { IKeypad } from "../types";
 import useShuffle from "../hooks/useShuffle";
 import { defaultMessage } from "../utils";
+import styled from "styled-components";
 
 const Keypad = (props: IKeypad) => {
   const {
