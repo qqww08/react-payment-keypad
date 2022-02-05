@@ -8,15 +8,13 @@
 
 ## Getting Started
 
-You can install the module via `npm` or `yarn`:
+You can install the module via `npm`
 
 ```sh
 npm install react-number-keypad --save
 ```
 
-```sh
-yarn add react-number-keypad
-```
+
 
 ### Description
 사용하기 쉬운 PIN 번호 입력 컴포넌트 
