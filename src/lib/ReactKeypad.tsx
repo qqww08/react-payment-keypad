@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Keypad from "./Keypad";
-import { Drawer } from "react-touch-modal";
 
 import type { IKeypad } from "../types";
+import Drawer from "./Drawer";
 
 interface Props extends IKeypad {
   onClose: () => void;
