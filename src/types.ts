@@ -1,15 +1,12 @@
 import type { ReactNode } from "react";
 
-type TPassword = (password: string | string[]) => void;
-
 export type Shuffle = "always" | "fixed" | "once";
 
 export interface IKeypad {
-  onFinish: TPassword;
-  onPassConfirm?: TPassword;
+  onFinish: (password: string) => void;
+  onPassConfirm?: (password: string[]) => void;
   count?: 4 | 5 | 6;
   emptyPassword?: boolean;
-  className?: string;
   shuffle?: Shuffle;
   errorMessage?: string;
   messages?: string[];
@@ -32,7 +29,7 @@ export interface KeypadProps {
   /**
    *   keypad 입력 후 패스워드 결과 값이 나오는 func
    * */
-  onFinish: TPassword;
+  onFinish: (password: string) => void;
 
   /**
    *  emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경
@@ -43,10 +40,10 @@ export interface KeypadProps {
   /**
    *  emptyPassword true 일 경우 패스워드 결과 값이 return 되는 func
    * */
-  onPassConfirm?: TPassword;
+  onPassConfirm?: (password: string[]) => void;
 
   /**
-   *   true 일 경우 패스워드창을 꽉 채웁니다.
+   *   true 일 경우 패스워드창이 페이지를 꽉 채웁니다.
    *   @default false
    * */
   full?: boolean;
@@ -79,7 +76,7 @@ export interface KeypadProps {
    * "사용할 패스워드 설정",
    * "다시 한번 입력해 주세요.",]
    * */
-  messages?: string[];
+  messages?: [string, string, string];
   /**
    *   전체삭제 버튼 커스텀을 위한 props 입니다.
    * */
