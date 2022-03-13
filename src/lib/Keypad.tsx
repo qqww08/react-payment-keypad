@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
-import useShuffle from "../hooks/useShuffle";
+import useShuffle from "./hooks/useShuffle";
 import { defaultMessage } from "../utils";
 import styled from "styled-components";
 import type { IKeypad } from "../types";
@@ -14,13 +14,13 @@ const Keypad = (props: IKeypad) => {
     className = "password",
     shuffle = "fixed",
     messages = defaultMessage,
-    error = "",
+    errorMessage = "",
     deleteIcon = "삭제",
     deleteAllIcon = "전체삭제",
   } = props;
 
   const [msg, setMsg] = useState<string>("");
-  const [errorMsg, setErrorMsg] = useState(error);
+  const [errorMsg, setErrorMsg] = useState(errorMessage);
   const [keyData, setKeyData] = useState<string[]>([...Array(count).map((item) => item)]);
   const [password, setPassword] = useState<any>([]);
 
@@ -84,10 +84,10 @@ const Keypad = (props: IKeypad) => {
   }, [emptyPassword]);
 
   useEffect(() => {
-    if (error) {
-      setErrorMsg(error);
+    if (errorMessage) {
+      setErrorMsg(errorMessage);
     }
-  }, [error]);
+  }, [errorMessage]);
 
   useEffect(() => {
     return () => {

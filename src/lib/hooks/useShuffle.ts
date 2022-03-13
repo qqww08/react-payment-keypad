@@ -1,6 +1,7 @@
-import { keyValue } from "../utils";
 import { useCallback, useEffect, useState } from "react";
-import { Shuffle } from "../types";
+
+import { keyValue } from "../../utils";
+import type { Shuffle } from "../../types";
 
 interface Props {
   shuffle: Shuffle;
