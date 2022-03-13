@@ -11,7 +11,6 @@ const Keypad = (props: IKeypad) => {
     onPassConfirm,
     emptyPassword = false,
     count = 6,
-    className = "password",
     shuffle = "fixed",
     messages = defaultMessage,
     errorMessage = "",
@@ -97,28 +96,28 @@ const Keypad = (props: IKeypad) => {
   }, []);
 
   return (
-    <__Container className={`${className}-container`}>
-      <__Message className={`${className}-message`}>{msg}</__Message>
-      <__ErrorMessage className={`${className}-error`}>{errorMsg}</__ErrorMessage>
-      <__BulletWrapper className={`${className}-bullet`}>
+    <__Container className={`password-container`}>
+      <__Message className={`password-message`}>{msg}</__Message>
+      <__ErrorMessage className={`password-error`}>{errorMsg}</__ErrorMessage>
+      <__BulletWrapper className={`password-bullet`}>
         {keyData?.map((item, index) => (
           <__Bullet key={index} activeColor={item} />
         ))}
       </__BulletWrapper>
 
-      <__PasswordWrapper className={`${className}-button-wrapper`}>
+      <__PasswordWrapper className={`password-button-wrapper`}>
         {keyNumber?.map((item, index) => {
           switch (index) {
             case 9:
               return (
                 <React.Fragment key={index}>
-                  <__KeyPad className={`${className}-button`} onClick={handleFullCut}>
+                  <__KeyPad className={`password-button`} onClick={handleFullCut}>
                     {deleteAllIcon}
                   </__KeyPad>
-                  <__KeyPad className={`${className}-button`} onClick={() => handleClick(item)}>
+                  <__KeyPad className={`password-button`} onClick={() => handleClick(item)}>
                     {item}
                   </__KeyPad>
-                  <__KeyPad className={`${className}-button`} onClick={handleDelete}>
+                  <__KeyPad className={`password-button`} onClick={handleDelete}>
                     {deleteIcon}
                   </__KeyPad>
                 </React.Fragment>
@@ -127,7 +126,7 @@ const Keypad = (props: IKeypad) => {
               return (
                 <__KeyPad
                   key={index}
-                  className={`${className}-button`}
+                  className={`password-button`}
                   onClick={() => handleClick(item)}
                 >
                   {item}
