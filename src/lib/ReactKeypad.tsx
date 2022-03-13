@@ -1,26 +1,21 @@
-import Drawer from "react-bottom-drawer";
 import React from "react";
 import styled from "styled-components";
 import Keypad from "./Keypad";
-import { IKeypad } from "../types";
+import type { IKeypad } from "../types";
+import { Drawer } from "react-touch-modal";
 
 interface Props extends IKeypad {
   onClose: () => void;
   isVisible: boolean;
+  full?: boolean;
 }
 
 const ReactKeypad = (props: Props) => {
-  const { onClose, isVisible, ...rest } = props;
+  const { onClose, isVisible, full = false, ...rest } = props;
 
   return (
     <__Wrapper>
-      <Drawer
-        duration={400}
-        hideScrollbars
-        onClose={onClose}
-        isVisible={isVisible}
-        className="password-drawer"
-      >
+      <Drawer onToggle={onClose} visible={isVisible} direction={"bottom"} full={full}>
         <Keypad {...rest} />
       </Drawer>
     </__Wrapper>
@@ -29,28 +24,7 @@ const ReactKeypad = (props: Props) => {
 
 export default ReactKeypad;
 const __Wrapper = styled.section`
-  .password-drawer__backdrop {
-    z-index: 100;
-  }
-
-  .password-drawer {
-    flex: 1;
-    z-index: 110;
-  }
-
-  .password-drawer__content {
-    padding: 0 !important;
-    height: 100% !important;
-    max-height: none !important;
-  }
-
-  .password-drawer__handle-wrapper {
-    z-index: 110 !important;
-    width: 100% !important;
-    padding: 10px 0 15vw !important;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  #drawer {
+    border-radius: 30px 30px 0 0;
   }
 `;
