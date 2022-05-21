@@ -20,7 +20,10 @@
     "noEmitOnError": true,
   },
   "include": [
-    "src"
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
   ],
   "exclude": [
     "src/example.tsx"

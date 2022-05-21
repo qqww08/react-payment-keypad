@@ -19,8 +19,7 @@
     "keypad"
   ],
   "dependencies": {
-    "styled-components": "^5.3.3",
-    "@types/styled-components": "^5.1.4"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
