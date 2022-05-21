@@ -40,7 +40,7 @@ const Drawer = (props: Props) => {
     setShow(false);
     setTimeout(() => {
       onToggle();
-    }, 0);
+    }, 500);
   };
 
   useEffect(() => {
