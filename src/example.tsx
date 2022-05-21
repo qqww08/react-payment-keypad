@@ -11,11 +11,10 @@ const Example = () => {
     // {Optional} emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경
     emptyPassword: true,
     // {Optional}  패스워드 화면을 꽉 채웁니다
-    full: true,
     // {Optional} 패스워드를 입력 하는 횟수를 정하는 props 입니다
     count: 6,
     // {Optional} 에러 메세지 props 입니다.
-    errorMessage: "패스워드가 일치 하지 않습니다.",
+    errorMessage: "",
     // {Optional} 메세지 커스텀을 위한 props 입니다.
     messages: [
       "패스워드를 입력 해주세요.",
@@ -55,7 +54,12 @@ const Example = () => {
     },
   };
 
-  return <ReactKeypad {...setting} />;
+  return (
+    <>
+      <button onClick={() => setVisible(true)}>asd</button>
+      <ReactKeypad {...setting} />
+    </>
+  );
 };
 
 export default Example;
