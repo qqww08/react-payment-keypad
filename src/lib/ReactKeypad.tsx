@@ -11,7 +11,7 @@ interface Props extends IKeypad {
   full?: boolean;
 }
 
-const ReactKeypad = (props: Props) => {
+const PaymentKeypad = (props: Props) => {
   const { onClose, isVisible, full = false, ...rest } = props;
 
   return (
@@ -23,7 +23,7 @@ const ReactKeypad = (props: Props) => {
   );
 };
 
-export default ReactKeypad;
+export default PaymentKeypad;
 const __Wrapper = styled.section`
   #drawer {
     border-radius: 30px 30px 0 0;

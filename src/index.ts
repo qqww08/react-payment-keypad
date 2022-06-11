@@ -1,4 +1,4 @@
-import ReactKeypad from "./lib/ReactKeypad";
-import type { KeypadProps } from "./types";
+import PaymentKeypad from "./lib/ReactKeypad";
+import type { PaymentKeypadProps } from "./types";
 
-export { ReactKeypad, KeypadProps };
+export { PaymentKeypad, PaymentKeypadProps };

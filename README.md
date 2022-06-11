@@ -10,23 +10,25 @@
 You can install the module via `npm`
 
 ```sh
-npm install react-number-keypad --save
+npm install react-payment-keypad
+or
+yarn add react-payment-keypad
 ```
 
 
 
 ### Description
-사용하기 쉬운 PIN 번호 입력 컴포넌트 
+사용하기 쉬운 Payment PIN 번호 입력 컴포넌트 
 
 ### Basic Usage
 
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
-import ReactKeypad from "react-number-keypad";
+import PaymentKeypad from "react-payment-keypad";
 
 ReactDOM.render(
-    <ReactKeypad
+    <PaymentKeypad
         isVisible
         emptyPassword={false}
         onClose={() => null}
@@ -42,7 +44,7 @@ ReactDOM.render(
 ```
 ### Custom Usage
 ```js
-import ReactKeypad from "./lib/ReactKeypad";
+import PaymentKeypad from "react-payment-keypad";
 import React, { useState } from "react";
 import type { KeypadProps } from "./types";
 

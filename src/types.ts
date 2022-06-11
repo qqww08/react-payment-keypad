@@ -13,7 +13,7 @@ export interface IKeypad {
   deleteAllIcon?: string | ReactNode;
   deleteIcon?: string | ReactNode;
 }
-export interface KeypadProps {
+export interface PaymentKeypadProps {
   /**
    *    keypad close func
    * */
