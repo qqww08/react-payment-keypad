@@ -18,9 +18,11 @@ const Keypad = (props: KeypadProps) => {
     deleteAllIcon = "전체삭제",
   } = props;
 
+  const currentCount = [...Array(count).map((item) => item)];
+
   const [msg, setMsg] = useState<string>("");
   const [errorMsg, setErrorMsg] = useState(errorMessage);
-  const [keyData, setKeyData] = useState<string[]>([...Array(count).map((item) => item)]);
+  const [keyData, setKeyData] = useState<string[]>(currentCount);
   const [password, setPassword] = useState<any>([]);
 
   const keyNumber = useShuffle({ shuffle, keyData });
@@ -57,22 +59,24 @@ const Keypad = (props: KeypadProps) => {
         if (onPassConfirm) {
           setMsg(messages[1]);
           onPassConfirm(password);
-          setKeyData([...Array(count).map((item) => item)]);
+          setErrorMsg(errorMessage);
+          setKeyData(currentCount);
+          setPassword([]);
         }
         break;
       case keyFinish && emptyPassword && password.length < 2:
         setMsg(messages[2]);
-        setKeyData([...Array(count).map((item) => item)]);
+        setKeyData(currentCount);
         setPassword((prev) => [...prev, keyValue]);
         break;
       case keyFinish:
-        setKeyData([...Array(count).map((item) => item)]);
+        setKeyData(currentCount);
         onFinish(keyValue);
         break;
       default:
         break;
     }
-  }, [keyValueLength]);
+  }, [keyValueLength, keyFinish]);
 
   useEffect(() => {
     if (emptyPassword) {
@@ -90,7 +94,7 @@ const Keypad = (props: KeypadProps) => {
 
   useEffect(() => {
     return () => {
-      setKeyData([...Array(count).map((item) => item)]);
+      setKeyData(currentCount);
       setMsg(messages[0]);
     };
   }, []);
