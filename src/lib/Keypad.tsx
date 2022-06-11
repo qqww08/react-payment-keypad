@@ -3,9 +3,9 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import useShuffle from "./hooks/useShuffle";
 import { defaultMessage } from "../utils";
 import styled from "styled-components";
-import type { IKeypad } from "../types";
+import { KeypadProps } from "../types";
 
-const Keypad = (props: IKeypad) => {
+const Keypad = (props: KeypadProps) => {
   const {
     onFinish,
     onPassConfirm,

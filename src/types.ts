@@ -2,18 +2,7 @@ import type { ReactNode } from "react";
 
 export type Shuffle = "always" | "fixed" | "once";
 
-export interface IKeypad {
-  onFinish: (password: string) => void;
-  onPassConfirm?: (password: string[]) => void;
-  count?: 4 | 5 | 6;
-  emptyPassword?: boolean;
-  shuffle?: Shuffle;
-  errorMessage?: string;
-  messages?: string[];
-  deleteAllIcon?: string | ReactNode;
-  deleteIcon?: string | ReactNode;
-}
-export interface PaymentKeypadProps {
+export interface PaymentKeypadProps extends KeypadProps {
   /**
    *    keypad close func
    * */
@@ -25,7 +14,9 @@ export interface PaymentKeypadProps {
    *   @default false
    * */
   isVisible: boolean;
+}
 
+export interface KeypadProps {
   /**
    *   keypad 입력 후 패스워드 결과 값이 나오는 func
    * */
@@ -85,4 +76,5 @@ export interface PaymentKeypadProps {
    * 삭제 버튼 커스텀을 위한 props 입니다.
    * */
   deleteIcon?: string | ReactNode;
+  opener?: boolean;
 }

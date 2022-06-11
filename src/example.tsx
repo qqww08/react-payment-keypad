@@ -1,11 +1,11 @@
-import ReactKeypad from "./lib/ReactKeypad";
+import PaymentKeypad from "./lib/PaymentKeypad";
 import React, { useState } from "react";
-import type { KeypadProps } from "./types";
+import type { PaymentKeypadProps } from "./types";
 
 const Example = () => {
   const [visible, setVisible] = useState(false);
 
-  const setting: KeypadProps = {
+  const setting: PaymentKeypadProps = {
     // {Required} keypad 사용 여부 입니다.
     isVisible: visible,
     // {Optional} emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경
@@ -57,7 +57,7 @@ const Example = () => {
   return (
     <>
       <button onClick={() => setVisible(true)}>asd</button>
-      <ReactKeypad {...setting} />
+      <PaymentKeypad {...setting} />
     </>
   );
 };
