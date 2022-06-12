@@ -1,4 +1,6 @@
+import usePaymentOpener from "./lib/hooks/usePaymentOpener";
 import PaymentKeypad from "./lib/PaymentKeypad";
 import type { PaymentKeypadProps } from "./types";
 
-export { PaymentKeypad, PaymentKeypadProps };
+export type { PaymentKeypadProps };
+export { PaymentKeypad, usePaymentOpener };

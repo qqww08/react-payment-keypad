@@ -23,8 +23,8 @@ interface StyledProps {
 }
 interface Props {
   direction: TDirection;
-  visible: boolean;
-  onToggle: () => void;
+  visible?: boolean;
+  onToggle?: () => void;
   children: ReactNode | string;
   full?: boolean;
   isTouch?: boolean;
@@ -40,7 +40,7 @@ const Drawer = (props: Props) => {
   const handleShowClick = () => {
     setShow(false);
     setTimeout(() => {
-      onToggle();
+      if (onToggle) onToggle();
     }, 500);
   };
 

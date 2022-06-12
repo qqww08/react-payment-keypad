@@ -6,21 +6,22 @@ export interface PaymentKeypadProps extends KeypadProps {
   /**
    *    keypad close func
    * */
-  onClose: () => void;
+  onClose?: () => void;
 
   /**
    *   keypad 사용 여부 입니다.
    *
    *   @default false
    * */
-  isVisible: boolean;
+  isVisible?: boolean;
+  opener?: boolean;
 }
 
 export interface KeypadProps {
   /**
    *   keypad 입력 후 패스워드 결과 값이 나오는 func
    * */
-  onFinish: (password: string) => void;
+  onFinish?: (password: string) => void;
 
   /**
    *  emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경
