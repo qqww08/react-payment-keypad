@@ -3,4 +3,5 @@ import PaymentKeypad from "./lib/PaymentKeypad";
 import type { PaymentKeypadProps } from "./types";
 
 export type { PaymentKeypadProps };
-export { PaymentKeypad, usePaymentOpener };
+export default PaymentKeypad;
+export { usePaymentOpener };

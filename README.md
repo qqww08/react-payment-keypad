@@ -44,14 +44,13 @@ ReactDOM.render(
 ```
 ### Custom Usage
 ```js
-import PaymentKeypad from "react-payment-keypad";
+import PaymentKeypad, { PaymentKeypadProps } from "react-payment-keypad";
 import React, { useState } from "react";
-import type { KeypadProps } from "./types";
 
 const Example = () => {
   const [visible, setVisible] = useState(false);
 
-  const setting: KeypadProps = {
+  const setting: PaymentKeypadProps = {
     // {Required} keypad 사용 여부 입니다.
     isVisible: visible,
     // {Optional} emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경
@@ -107,13 +106,47 @@ const Example = () => {
 export default Example;
 
 ```
+
+### 새 창으로 열어서 패스워드를 받아와야 하는 경우
+
+#### ${your_domain}/main
+```js
+import { usePaymentOpener } from "react-payment-keypad";
+
+const Main = () => {
+  const { password, onPaymentOpen } = usePaymentOpener();
+  console.log(password); // passwrod callback
+  
+  const handleOpen = () =>{
+    onPaymentOpen("/payment", { width:600, height:700 })
+  }
+  
+  return (
+    <div>
+      <button onClick={handleOpen}>Payment Open!</button>    
+    </div>
+  );
+};
+
+export default Main;
+```
+#### ${your_domain}/payment
+```js
+import PaymentKeypad from "react-payment-keypad";
+
+const Payment = () => {
+  return <PaymentKeypad opener={true} />
+};
+
+export default Payment;
+```
 ## Props
 
 | Prop           | Type                        | Required? | Default Value | Description                                       |
 | -------------- |-----------------------------| --------- | ------------- |---------------------------------------------------|
-| isVisible      | `boolean`                   | Required  | -             | keypad 사용 여부 입니다.                                 |
-| onClose        | `function`                  | Required  | -             | keypad close func                                 |
-| onFinish       | `function`                  | Required  | -             | keypad 입력 후 패스워드 결과 값이 나오는 func                   |
+| isVisible      | `boolean`                   | Optional  | -             | keypad 사용 여부 입니다.                                 |
+| onClose        | `function`                  | Optional  | -             | keypad close func                                 |
+| onFinish       | `function`                  | Optional  | -             | keypad 입력 후 패스워드 결과 값이 나오는 func                   |
 | count          | `number`                    | Optional  | `6`           | 패스워드를 입력 하는 횟수를 정하는 props 입니다                     |
 | emptyPassword  | `boolean`                   | Optional  | `false`       | emptyPassword true 일 경우 패스워드를 2번 입력 하도록 변경        |
 | onPassConfirm  | `function`                  | Optional  | `true`        | emptyPassword true 일 경우 패스워드 결과 값이 return 되는 func |
@@ -123,6 +156,7 @@ export default Example;
 | deleteAllIcon  | `string or React.ReactNode` | Optional  | `전체삭제`   | 전체삭제 버튼 커스텀을 위한 props 입니다.                                             |
 | deleteIcon     | `string or React.ReactNode` | Optional  | `삭제`   |삭제 버튼 커스텀을 위한 props 입니다.|
 | full     | `boolean`                   | Optional  | `false`   | true 일 경우 패스워드창이 페이지를 꽉 채웁니다.                     |
+| opener     | `boolean`                   | Optional  | `false`   | 새 창 열기로 패스워드를 입력 받을 경우 해당 페이지에서 true                 |
 
 
 
