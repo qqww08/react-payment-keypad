@@ -16,6 +16,7 @@ const Keypad = (props: KeypadProps) => {
     errorMessage = "",
     deleteIcon = "삭제",
     deleteAllIcon = "전체삭제",
+    opener,
   } = props;
 
   const currentCount = [...Array(count).map((item) => item)];
@@ -54,14 +55,21 @@ const Keypad = (props: KeypadProps) => {
   );
 
   useEffect(() => {
+    const resetHandler = () => {
+      setMsg(messages[1]);
+      setErrorMsg(errorMessage);
+      setKeyData(currentCount);
+      setPassword([]);
+    };
     switch (true) {
       case password.length === 2:
+        if (opener) {
+          resetHandler();
+          return window.opener.onPaymentOpener(password);
+        }
         if (onPassConfirm) {
-          setMsg(messages[1]);
+          resetHandler();
           onPassConfirm(password);
-          setErrorMsg(errorMessage);
-          setKeyData(currentCount);
-          setPassword([]);
         }
         break;
       case keyFinish && emptyPassword && password.length < 2:
@@ -70,8 +78,12 @@ const Keypad = (props: KeypadProps) => {
         setPassword((prev) => [...prev, keyValue]);
         break;
       case keyFinish:
+        if (opener) {
+          setKeyData(currentCount);
+          return window.opener.onPaymentOpener(keyValue);
+        }
         setKeyData(currentCount);
-        onFinish(keyValue);
+        if (onFinish) onFinish(keyValue);
         break;
       default:
         break;
