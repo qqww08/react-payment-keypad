@@ -33,6 +33,8 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -46,11 +48,17 @@
     "start": "react-scripts start",
     "build": "tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{js,ts,tsx}": [
+      "eslint"
     ]
   },
   "browserslist": {
