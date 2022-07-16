@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/qqww08/react-payment-keypad/compare/v1.0.5...v1.1.0) (2022-07-16)
+
+
+### Features
+
+* yarn berry enabled ([7743280](https://github.com/qqww08/react-payment-keypad/commit/77432805dfc4732adc82a592433299041f53bc3a))
+
 ## [1.0.5](https://github.com/qqww08/react-payment-keypad/compare/v1.0.4...v1.0.5) (2022-07-16)
 
 
