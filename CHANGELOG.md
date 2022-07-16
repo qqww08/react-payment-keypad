@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/qqww08/react-payment-keypad/compare/v1.0.4...v1.0.5) (2022-07-16)
+
+
+### Bug Fixes
+
+* CI TEST ([9fdead5](https://github.com/qqww08/react-payment-keypad/commit/9fdead5a92ab2a33fcd3a6b1b6b651b37c6e29a6))
+
 ## [1.0.1](https://github.com/qqww08/react-payment-keypad/compare/v1.0.0...v1.0.1) (2022-07-16)
 
 
