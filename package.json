@@ -1,6 +1,6 @@
 {
   "name": "react-payment-keypad",
-  "version": "0.0.0-development",
+  "version": "1.0.4",
   "description": "react-payment-keypad",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -50,8 +50,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "tsc",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },
@@ -81,7 +79,6 @@
     "type": "git",
     "url": "https://github.com/qqww08/react-payment-keypad.git"
   },
-  "private": true,
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
