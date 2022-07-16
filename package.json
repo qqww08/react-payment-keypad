@@ -1,6 +1,6 @@
 {
   "name": "react-payment-keypad",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "react-payment-keypad",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
