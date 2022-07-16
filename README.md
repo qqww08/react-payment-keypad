@@ -18,7 +18,7 @@ yarn add react-payment-keypad
 
 
 ### Description
-사용하기 쉬운 Payment PIN 번호 입력 컴포넌트 
+사용하기 쉬운 Payment PIN 번호 입력 컴포넌트  
 
 ### Basic Usage
 
