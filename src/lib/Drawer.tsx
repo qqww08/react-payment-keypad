@@ -1,5 +1,6 @@
+import * as React from "react";
 import styled from "styled-components";
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import useScrollHidden from "./hooks/useScrollHidden";
 import {
   directionTransform,
