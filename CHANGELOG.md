@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/qqww08/react-payment-keypad/compare/v1.1.0...v1.2.0) (2022-07-18)
+
+
+### Features
+
+* tsup 으로 변경 ([3594187](https://github.com/qqww08/react-payment-keypad/commit/35941873cd864294099fa801b68c529ea1264ac8))
+
 # [1.1.0](https://github.com/qqww08/react-payment-keypad/compare/v1.0.5...v1.1.0) (2022-07-16)
 
 
