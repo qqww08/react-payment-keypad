@@ -1,12 +1,10 @@
 import * as React from "react";
 import Keypad from "./Keypad";
 
-import type { PaymentKeypadProps } from "../types";
+import type { ReactPaymentKeypadProps } from "../types";
 import Drawer from "./Drawer";
 
-type Props = PaymentKeypadProps;
-
-const PaymentKeypad = (props: Props) => {
+export const ReactPaymentKeypad = (props: ReactPaymentKeypadProps) => {
   const { onClose, isVisible, full = false, ...rest } = props;
   const { opener } = { ...rest };
 
@@ -21,5 +19,3 @@ const PaymentKeypad = (props: Props) => {
     </Drawer>
   );
 };
-
-export default PaymentKeypad;

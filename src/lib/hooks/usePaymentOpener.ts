@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 type TValue = string | string[];
-interface ReturnValue {
+export interface ReturnValue {
   password: TValue;
   onPaymentOpen: (url: string, size: { width: number; height: number }) => void;
 }
 
-const usePaymentOpener = (): ReturnValue => {
+export const usePaymentOpener = (): ReturnValue => {
   const [value, setValue] = useState<TValue>([]);
 
   const handleWindowOpen = (url: string, size: { width: number; height: number }) => {
@@ -19,5 +19,3 @@ const usePaymentOpener = (): ReturnValue => {
 
   return { password: value, onPaymentOpen: handleWindowOpen };
 };
-
-export default usePaymentOpener;

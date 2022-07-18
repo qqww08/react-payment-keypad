@@ -26,10 +26,10 @@ yarn add react-payment-keypad
 ```js
 import React from "react";
 import ReactDOM from "react-dom";
-import PaymentKeypad from "react-payment-keypad";
+import ReactPaymentKeypad from "react-payment-keypad";
 
 ReactDOM.render(
-    <PaymentKeypad
+    <ReactPaymentKeypad
         isVisible
         emptyPassword={false}
         onClose={() => null}
@@ -45,7 +45,7 @@ ReactDOM.render(
 ```
 ### Custom Usage
 ```js
-import PaymentKeypad, { PaymentKeypadProps } from "react-payment-keypad";
+import ReactPaymentKeypad, { PaymentKeypadProps } from "react-payment-keypad";
 import React, { useState } from "react";
 
 const Example = () => {
@@ -133,10 +133,10 @@ export default Main;
 ```
 #### ${your_domain}/payment
 ```js
-import PaymentKeypad from "react-payment-keypad";
+import ReactPaymentKeypad from "react-payment-keypad";
 
 const Payment = () => {
-  return <PaymentKeypad opener={true} />
+  return <ReactPaymentKeypad opener={true} />
 };
 
 export default Payment;

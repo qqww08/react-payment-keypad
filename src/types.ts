@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export type Shuffle = "always" | "fixed" | "once";
 
-export interface PaymentKeypadProps extends KeypadProps {
+export interface ReactPaymentKeypadProps extends KeypadProps {
   /**
    *    keypad close func
    * */
