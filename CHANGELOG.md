@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/qqww08/react-payment-keypad/compare/v1.2.0...v2.0.0) (2022-07-18)
+
+
+### chore
+
+* 컴포넌트 네이밍 변경 ([9bb3b99](https://github.com/qqww08/react-payment-keypad/commit/9bb3b995fa8fa8d4144779dc96ac1459b35bdb80))
+
+
+### BREAKING CHANGES
+
+* 컴포넌트 네이밍이 변경 되었습니다.
+
+Before:
+<PaymentKeypad />
+
+After
+<ReactPaymentKeypad />
+
 # [1.2.0](https://github.com/qqww08/react-payment-keypad/compare/v1.1.0...v1.2.0) (2022-07-18)
 
 
