@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/qqww08/react-payment-keypad/compare/v2.0.0...v2.0.1) (2022-10-17)
+
+
+### Bug Fixes
+
+* build error ([f446c6a](https://github.com/qqww08/react-payment-keypad/commit/f446c6a91c094d0e0b54d46649875797f7ef700a))
+* disabled yarn berryC ([9effdd2](https://github.com/qqww08/react-payment-keypad/commit/9effdd27ca0cea1ce38514a4f4e36376888f4d4e))
+
 # [2.0.0](https://github.com/qqww08/react-payment-keypad/compare/v1.2.0...v2.0.0) (2022-07-18)
 
 
