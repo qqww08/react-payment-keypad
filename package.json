@@ -1,6 +1,6 @@
 {
   "name": "react-payment-keypad",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "react-payment-keypad",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -34,8 +34,8 @@
     "@typescript-eslint/parser": "^5.10.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.29.0",
-    "eslint-config-react-app": "^7.0.1",
     "eslint-config-prettier": "^8.0.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
@@ -54,7 +54,7 @@
     "react": "^16.11.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
-    "build": "npm run clean:dist && tsup src/index.tsx --format esm,cjs --dts --external react --external react-dom",
+    "build": "npm run clean:dist && tsup src/index.ts --format esm,cjs --dts --external react --external react-dom",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "clean:dist": "rm -rf dist"
