@@ -78,4 +78,5 @@ export interface KeypadProps {
    * */
   deleteIcon?: string | ReactNode;
   opener?: boolean;
+  className?: string;
 }
