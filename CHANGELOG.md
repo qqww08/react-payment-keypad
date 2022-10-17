@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/qqww08/react-payment-keypad/compare/v2.0.1...v2.0.2) (2022-10-17)
+
+
+### Bug Fixes
+
+* remove protal removeChild ([2b53eb5](https://github.com/qqww08/react-payment-keypad/commit/2b53eb5b8132e590dc2dde2d711ff107b67b4074))
+
 ## [2.0.1](https://github.com/qqww08/react-payment-keypad/compare/v2.0.0...v2.0.1) (2022-10-17)
 
 
